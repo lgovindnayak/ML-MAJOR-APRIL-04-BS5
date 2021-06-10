@@ -54,20 +54,20 @@ df.news_headline = df.news_headline.apply(lambda x:x.lower())
 df.news_article = df.news_article.apply(lambda x:x.lower())
 
 # 2. HTMP Tags
-df.news_headline = df.news_headline.apply('html_tag')
-df.news_article = df.news_article.apply('html_tag')
+#df.news_headline = df.news_headline.apply(html_tag)
+#df.news_article = df.news_article.apply(html_tag)
 
 # 3. Contractions
-df.news_headline = df.news_headline.apply(con)
-df.news_article = df.news_article.apply(con)
+#df.news_headline = df.news_headline.apply(con)
+#df.news_article = df.news_article.apply(con)
 
 # 4. Special Charcters
-df.news_headline = df.news_headline.apply('remove_sp')
-df.news_article = df.news_article.apply('remove_sp')
+#df.news_headline = df.news_headline.apply(remove_sp)
+#df.news_article = df.news_article.apply(remove_sp)
 
 # 5. Stop Words
-df.news_headline = df.news_headline.apply(remove_stopwords)
-df.news_article = df.news_article.apply(remove_stopwords)
+#df.news_headline = df.news_headline.apply(remove_stopwords)
+#df.news_article = df.news_article.apply(remove_stopwords)
 
 df['compound'] = df['news_article'].apply(lambda x: vs.polarity_scores(x)['compound'])
 
